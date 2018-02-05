@@ -1,0 +1,22 @@
+.card{margin-top: 10px;}
+
+.newOnCard{
+	position: fixed;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+}
+
+.card-body{
+	    background-color: #dc3545;
+}
+
+.form-check label{
+	padding-right: 30px;
+}
+
+@media (max-width: 576px) {
+	.display-3{font-size: 50px;}
+}
+
+

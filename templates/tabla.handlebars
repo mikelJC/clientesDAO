@@ -1,0 +1,62 @@
+
+<div class="col-md-12 d-none d-md-table">
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombres</th>
+              <th>Ciudad</th>
+              <th>Sexo</th>
+              <th>Teléfono</th>
+              <th>Fecha nacimiento</th>
+              <th colspan="2">Opciones</th>
+            </tr>
+        </thead>
+          <tbody>
+
+          {{#each this}}
+            <tr>
+              <th scope="row" data-id='{{id}}'>{{@index}}</th>
+              <td>{{nombres}}</td>
+              <td>{{ciudad}}</td>
+              <td>{{sexo}}</td>
+              <td>{{telefono}}</td>
+              <td>{{fechaReverse fechaNacimiento}}</td>
+              <td><i class="fa fa-pencil-square-o btn" aria-hidden="true" data-toggle="modal" data-target="#myModal" id="btn-edit" data-id='{{@index}}'></i></td>
+              <td><i class="fa fa-eraser btn" aria-hidden="true" id="btn-del" data-id='{{@index}}'></i></td>
+            </tr>
+          {{/each}}
+
+          </tbody>
+      </table>
+          <i class="fa fa-plus-square fa-3x btn" aria-hidden="true" data-toggle="modal" data-target="#myModal" id="openmodalnew"></i>
+</div>
+
+
+
+
+<div class="col-md-12 d-md-none">
+  <i class="fa fa-plus-square fa-3x btn newOnCard" aria-hidden="true" data-toggle="modal" data-target="#myModal" id="openmodalnew"></i>
+
+{{#each this}}
+
+<div class="card col-12">
+  <div class="card-body" data-id='{{id}}'>
+    <h5 class="card-title">{{nombres}}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ciudad}}</li>
+    <li class="list-group-item">{{sexo}}</li>
+    <li class="list-group-item">{{telefono}}</li>
+    <li class="list-group-item">{{fechaReverse fechaNacimiento}}</li>
+  </ul>
+  <div class="card-footer">
+    <i class="fa fa-pencil-square-o btn" aria-hidden="true" data-toggle="modal"  id="btn-edit-card" data-id='{{@index}}'></i>
+    <i class="fa fa-eraser btn" aria-hidden="true" id="btn-del-card" data-id='{{@index}}'></i>
+  </div>
+</div>
+
+{{/each}}
+
+</div>
+

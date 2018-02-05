@@ -1,0 +1,62 @@
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">{{tipoEvent}}</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <form>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="form-group row" hidden="true">
+                            <label for="" class="col-3 col-form-label">Id</label>
+                            <div class="col-9">
+                                <input class="form-control" type="text" value="{{id}}" id="id">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-3 col-form-label">Nombre</label>
+                            <div class="col-9">
+                                <input class="form-control" type="text" value="{{nombre}}" id="nombre">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-3 col-form-label">Ciudad</label>
+                            <div class="col-9">
+                                <input class="form-control" type="text" value="{{ciudad}}" id="ciudad">
+                            </div>
+                        </div>
+                            <div class="form-check">
+                                <label class="form-check-label" for="exampleRadios1">Hombre</label>
+                                <input class="form-check-input" type="radio" name="seleSexo" id="hombre" value="H" {{#if sexo}} checked {{/if}}>
+                                <label class="form-check-label" for="exampleRadios1">Mujer</label>
+                                <input class="form-check-input" type="radio" name="seleSexo" id="mujer" value="M" {{#if sexo}} {{else}} checked{{/if}}>
+                            </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-3 col-form-label">Teléfono</label>
+                            <div class="col-9">
+                                <input class="form-control" type="text" value="{{telefono}}" id="telefono">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="" class="col-3 col-form-label">Fecha Nac.</label>
+                            <div class="col-9">
+                                <input class="form-control" type="text" value="{{fechaNacimiento}}" id="datepicker">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="{{tipo}}" data-id="{{tipo}}">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
