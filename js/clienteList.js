@@ -29,7 +29,10 @@ var ClienteList = (function(){
 							"ciudad":data[i].ciudad,
 							"sexo":data[i].sexo,
 							"telefono":data[i].telefono,
-							"fechaNacimiento":data[i].fechaNacimiento
+							"fechaNacimiento":data[i].fechaNacimiento,
+							"direccion":data[i].direccion,
+							"provincia":data[i].provincia,
+							"fechaAlta":data[i].fechaAlta
 					})
 					aCliente.push(cli);
 				}

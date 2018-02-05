@@ -10,19 +10,13 @@ var clienteListView = (function() {
 	}
 
 
-	function eliminarCliente(data) {
-		var HTML = Handlebars.templates.tabla(data);
-    	document.getElementById("cont-tabla").innerHTML=HTML;
-	}
-
-
 
 	return{
       init: function () {
          events.subscribe('crearCliente',mostrarClientes)
          events.subscribe('leer',mostrarClientes)
          events.subscribe('modificar',mostrarClientes)
-         events.subscribe('eliminar',eliminarCliente)
+         events.subscribe('eliminar',mostrarClientes)
       }
 	}
 	
@@ -66,7 +60,7 @@ ClienteList.leer();
               }
             });
 
-            var data = {"tipoEvent":"Editar Cliente","nombre":aTitles[1],"ciudad":aTitles[2],"sexo":aTitles[3],"telefono":aTitles[4],"fechaNacimiento":aTitles[5],"tipo":"editcli","id":aTitles[0]};
+            var data = {"tipoEvent":"Editar Cliente","nombre":aTitles[1],"ciudad":aTitles[2],"provincia":aTitles[3],"direccion":aTitles[4],"sexo":aTitles[5],"telefono":aTitles[6],"fechaNacimiento":aTitles[7],"fechaAlta":aTitles[8],"tipo":"editcli","id":aTitles[0]};
             if(data.sexo=="M"){data.sexo=false}else{data.sexo=true}
             events.publish('llama-modal-new', data);
         }
@@ -88,3 +82,6 @@ ClienteList.leer();
 
 
 	});
+
+
+  /*https://maps.googleapis.com/maps/api/geocode/xml?address=avenida+cortes+valencianas+2,Valencia,46015&key=AIzaSyCupzA9-dN9CxJDWzCcbO8RQMCyRkE1PSU*/

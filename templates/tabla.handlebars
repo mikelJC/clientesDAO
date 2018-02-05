@@ -6,9 +6,12 @@
               <th>#</th>
               <th>Nombres</th>
               <th>Ciudad</th>
+              <th>Provincia</th>
+              <th>Dirección</th>
               <th>Sexo</th>
               <th>Teléfono</th>
               <th>Fecha nacimiento</th>
+              <th>Fecha Alta</th>
               <th colspan="2">Opciones</th>
             </tr>
         </thead>
@@ -19,9 +22,12 @@
               <th scope="row" data-id='{{id}}'>{{@index}}</th>
               <td>{{nombres}}</td>
               <td>{{ciudad}}</td>
+              <td>{{provincia}}</td>
+              <td>{{direccion}}</td>
               <td>{{sexo}}</td>
               <td>{{telefono}}</td>
               <td>{{fechaReverse fechaNacimiento}}</td>
+              <td>{{fechaReverse fechaAlta}}</td>
               <td><i class="fa fa-pencil-square-o btn" aria-hidden="true" data-toggle="modal" data-target="#myModal" id="btn-edit" data-id='{{@index}}'></i></td>
               <td><i class="fa fa-eraser btn" aria-hidden="true" id="btn-del" data-id='{{@index}}'></i></td>
             </tr>
@@ -46,9 +52,12 @@
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">{{ciudad}}</li>
+    <li class="list-group-item">{{provincia}}</li>
+    <li class="list-group-item">{{direccion}}</li>
     <li class="list-group-item">{{sexo}}</li>
     <li class="list-group-item">{{telefono}}</li>
     <li class="list-group-item">{{fechaReverse fechaNacimiento}}</li>
+    <li class="list-group-item">{{fechaReverse fechaAlta}}</li>
   </ul>
   <div class="card-footer">
     <i class="fa fa-pencil-square-o btn" aria-hidden="true" data-toggle="modal"  id="btn-edit-card" data-id='{{@index}}'></i>

@@ -6,7 +6,10 @@ var Cliente = function(datoJson){
 		ciudad:datoJson.ciudad,
 		sexo:datoJson.sexo,
 		telefono:datoJson.telefono,
-		fechaNacimiento:datoJson.fechaNacimiento
+		fechaNacimiento:datoJson.fechaNacimiento,
+		direccion:datoJson.direccion,
+		provincia:datoJson.provincia,
+		fechaAlta:datoJson.fechaAlta
 	}
 
 }
