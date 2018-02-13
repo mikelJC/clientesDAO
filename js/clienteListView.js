@@ -43,10 +43,12 @@ ClienteList.leer();
 	
     $('body').on("click","#openmodalnew, #btn-edit",function() {
 
+        var aTitles = []
+
         if($(this).attr('id')=="openmodalnew"){
             var data = {"tipoEvent":"Nuevo Cliente","nombre":"","ciudad":"","sexo":"","telefono":"","fechaNacimiento":"","tipo":"newcli","id":""};
             events.publish('llama-modal-new', data);
-        }else{
+        }else {
 
             var aTitles = []
 
@@ -68,7 +70,7 @@ ClienteList.leer();
 
 
 
-    $('#cont-tabla').on("click","#btn-del-card, #btn-edit-card",function() {
+    $('#cont-tabla').on("click","#btn-del-card, #btn-edit-card, #btn-loc-card" ,function() {
 
     	var dataId = $(this).attr('data-id')
 
@@ -76,12 +78,11 @@ ClienteList.leer();
 
     	if($(this).attr('id')=="btn-edit-card"){
     		res[0].click()
-    	}else{
-    		res[1].click()
+    	}else if ($(this).attr('id')=="btn-del-card") {
+        res[1].click()
+      }else{
+    		res[2].click()
     	}
 
 
 	});
-
-
-  /*https://maps.googleapis.com/maps/api/geocode/xml?address=avenida+cortes+valencianas+2,Valencia,46015&key=AIzaSyCupzA9-dN9CxJDWzCcbO8RQMCyRkE1PSU*/

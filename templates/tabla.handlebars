@@ -12,7 +12,7 @@
               <th>Teléfono</th>
               <th>Fecha nacimiento</th>
               <th>Fecha Alta</th>
-              <th colspan="2">Opciones</th>
+              <th colspan="3">Opciones</th>
             </tr>
         </thead>
           <tbody>
@@ -30,6 +30,7 @@
               <td>{{fechaReverse fechaAlta}}</td>
               <td><i class="fa fa-pencil-square-o btn" aria-hidden="true" data-toggle="modal" data-target="#myModal" id="btn-edit" data-id='{{@index}}'></i></td>
               <td><i class="fa fa-eraser btn" aria-hidden="true" id="btn-del" data-id='{{@index}}'></i></td>
+              <td><i class="fa fa-map-marker btn" aria-hidden="true" id="btn-loc" data-id='{{@index}}'></i></td>
             </tr>
           {{/each}}
 
@@ -62,6 +63,7 @@
   <div class="card-footer">
     <i class="fa fa-pencil-square-o btn" aria-hidden="true" data-toggle="modal"  id="btn-edit-card" data-id='{{@index}}'></i>
     <i class="fa fa-eraser btn" aria-hidden="true" id="btn-del-card" data-id='{{@index}}'></i>
+    <i class="fa fa-map-marker btn" aria-hidden="true" id="btn-loc-card" data-id='{{@index}}'></i>
   </div>
 </div>
 

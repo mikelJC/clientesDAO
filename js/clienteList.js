@@ -75,11 +75,28 @@ var ClienteList = (function(){
 		},"json");
 	}
 
+
+	function tomarCoordenadas(datos) {
+
+		var url = "https://maps.googleapis.com/maps/api/geocode/json?address="+datos[4].replace(/\s/g,"+")+","+datos[2]+","+datos[3]+"&key=AIzaSyCupzA9-dN9CxJDWzCcbO8RQMCyRkE1PSU"
+
+		$.post(url, function(data) {
+
+			data.results[0].geometry.location
+			var lat = data.results[0].geometry.location.lat
+			var lng = data.results[0].geometry.location.lng
+
+			//mandar las variables a la plantilla
+		});
+	}
+
+
 	return {
 		crearCliente:crearCliente,
 		leer:leer,
 		modificar:modificar,
-		eliminar:eliminar
+		eliminar:eliminar,
+		tomarCoordenadas:tomarCoordenadas
 	}
 
 })()

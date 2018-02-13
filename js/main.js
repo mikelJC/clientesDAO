@@ -1,10 +1,9 @@
-/*var url = (function () {
-  var direccion = "http://localhost/API/";
+$(document).ready(function() {
+	
+})
 
-  return{
-    direccion:direccion
-  }
-})()*/
+
+
 
 
 Handlebars.registerHelper('fechaReverse', function(options) {
@@ -16,13 +15,4 @@ Handlebars.registerHelper('fechaReverse', function(options) {
 
   return fecha;
 });
-
-
-/*function reverseFecha(dfecha) {
-
-  var fecha = dfecha.split("/").reverse().join("/");
-
-  return fecha;
-}
-*/
 
